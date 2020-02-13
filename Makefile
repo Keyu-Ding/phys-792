@@ -10,7 +10,7 @@ EXE = $(SRC:.cc=.exe)
 all: $(EXE)
 
 %.exe: %.cc
-	(CXX) $(CXXFLAGS) $(LIBS) $< -o $@
+	$(CXX) $(CXXFLAGS) $(LIBS) $< -o $@
 	
 info:
 		@echo $(SRC)
