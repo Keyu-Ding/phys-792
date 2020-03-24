@@ -1,13 +1,13 @@
-# Particle component:
-- Alpha particle: two protons & two neutrons.
-- Beta particle: e- or e+ with high energy.
-- Gamma particle: photon.
+# Particle component & Interactions list:
+- Particle component:
+  - Alpha particle: two protons & two neutrons.
+  - Beta particle: e- or e+ with high energy.
+  - Gamma particle: photon.
 
-# Interactions list:
 - Interactions in the air:
- - Alpha: Transportation, Ionisation.
- - Beta: Transportation, Ionisation, Bremsstrahlung, Annihilation.
- - Gamma: Transportation, Ionisation, MultipleScattering, Rayleigh, PhotoElectricEffect, ComptonScattering, GammaConversion.
+  - Alpha: Transportation, Ionisation.
+  - Beta: Transportation, Ionisation, Bremsstrahlung, Annihilation.
+  - Gamma: Transportation, Ionisation, MultipleScattering, Rayleigh, PhotoElectricEffect, ComptonScattering, GammaConversion.
 
 # Interactions explanation:
 - Transportation: Transfer process without any loss of energy.
@@ -18,5 +18,5 @@
 - Rayleigh: The elastic scattering of the electromagnetic radiation by the particle with very small wavelength in comparison to incident radiation.
 - PhotoElectricEffect: The process of emission of electron from the atoms by the effect of incident photons.
 - ComptonScattering: The scattering of a photon by a charged particle, usually an electron.
-- GammaConversion: A radioactive decay process wherein an excited nucleus interacts electromagnetically with one of the orbital electrons of the atom causing the emission of electrons from or
+- GammaConversion: A radioactive decay process wherein an excited nucleus interacts electromagnetically with one of the orbital electrons of the atom causing the emission of electrons from orbit.
 
