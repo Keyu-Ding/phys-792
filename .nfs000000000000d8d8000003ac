@@ -1,0 +1,67 @@
+
+{
+
+	gStyle->SetOptFit(0);//turn off the fitting results
+	gStyle->SetOptStat("");//remove statistic results
+	//remove margin
+	gStyle->SetPadLeftMargin(0.085);
+	gStyle->SetPadRightMargin(0.015);
+	gStyle->SetPadTopMargin(0.02);
+	//get their font, size the same
+	gStyle->SetTextFont(132);
+	gStyle->SetLabelFont(132,"XY");
+	gStyle->SetTitleFont(132,"XY");
+	gStyle->SetLegendFont(132);
+	gStyle->SetLabelSize(0.05,"XY");
+	gStyle->SetTitleSize(0.05,"XY");
+	gStyle->SetTitleOffset(0.95,"X");
+	gStyle->SetTitleOffset(0.7,"Y");
+	
+   TCanvas c1;
+	c1.SetLogx();
+	
+	TGraphErrors e("electron.txt");
+	e.SetMarkerColor(kBlack); 
+	e.SetMarkerStyle(4); 
+	e.SetMarkerSize(1.0);
+	e.SetTitle(";Momentum [GeV];dE/dx[keV/cm]");
+	e.GetYaxis()->SetRangeUser(0,60);
+	e.GetXaxis()->SetRangeUser(0.01,10);
+	e.SetLineColor(kBlack);
+	e.Draw("CAP"); 
+
+	TGraphErrors m("muon.txt");
+	m.SetMarkerColor(kRed);
+	m.SetMarkerStyle(20);
+	m.SetMarkerSize(1.0);
+	m.SetLineColor(kRed);
+	m.Draw("CP");
+
+   TGraphErrors pi("pion.txt");
+	pi.SetMarkerColor(kBlue);
+	pi.SetMarkerStyle(21);
+	pi.SetMarkerSize(1.0);
+	pi.SetLineColor(kBlue);
+	pi.Draw("CP");
+
+	TGraphErrors k("kaon.txt");
+	k.SetMarkerColor(kGreen);
+	k.SetMarkerStyle(22);
+	k.SetMarkerSize(1.0);
+	k.SetLineColor(kGreen);
+	k.Draw("CP");
+
+   TGraphErrors p("proton.txt");
+	p.SetMarkerColor(kOrange);
+	p.SetMarkerStyle(23);
+	p.SetMarkerSize(1.0);
+	p.SetLineColor(kOrange);
+	p.Draw("CP");
+	
+	TLatex latex;
+	latex.DrawLatex(0.015,1, "electron");
+	latex.DrawLatex(0.011,5, "muon");
+	latex.DrawLatex(0.015,11, "pion");
+	latex.DrawLatex(0.011,28, "kaon");
+	latex.DrawLatex(0.015,38, "proton");
+}
